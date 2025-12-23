@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Malaysia 4D Analytics Suite</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<h1>🎰 4D Analytics Suite</h1>
+
+<div class="controls">
+  <button onclick="runAnalysis()">Run Analysis</button>
+  <button onclick="generatePicks()">Generate Picks</button>
+</div>
+
+<h2>Logic Settings</h2>
+<pre id="logic"></pre>
+
+<h2>Top Frequency</h2>
+<div id="frequency"></div>
+
+<h2>Today Picks</h2>
+<div id="picks"></div>
+
+<script src="config.js"></script>
+<script src="data.js"></script>
+<script src="analytics.js"></script>
+<script src="picks.js"></script>
+
+<script>
+  document.getElementById("logic").innerText =
+    JSON.stringify(LOGIC_CONFIG, null, 2);
+</script>
+
+</body>
+</html>
